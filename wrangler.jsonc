@@ -1,0 +1,19 @@
+{
+  "name": "mcp-bcentral-chile",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-07-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "custom_domains": [
+    { "domain": "bcentral-mcp.kumocloud.cl" }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "BCENTRAL_RATE_LIMIT_MS": "500",
+    "BCENTRAL_CACHE_TTL_S": "900",
+    "BCENTRAL_MAX_SERIES": "30",
+    "BCENTRAL_UPSTREAM_TIMEOUT_MS": "12000"
+  }
+}
