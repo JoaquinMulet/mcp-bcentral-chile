@@ -53,8 +53,10 @@ function apiKey(env: BcentralEnv): string {
   const k = env.BCENTRAL_API_KEY?.trim();
   if (!k) {
     throw new ErrorDidactico(
-      "El servidor no tiene configurada la clave de la API del Banco Central (BCENTRAL_API_KEY). " +
-        "Obtén la clave privada gratuita registrándote en https://si3.bcentral.cl/Siete/es/Siete/API (sección Registrarse) y " +
+      "El servidor no tiene configurada la clave privada del API del Banco Central (BCENTRAL_API_KEY). " +
+        "Paso a paso: (1) regístrate con usuario y contraseña en https://si3.bcentral.cl/Siete/es/Siete/API (sección Registrarse); " +
+        "(2) inicia sesión — las credenciales del API se activan al entrar; " +
+        "(3) dentro del portal, copia tu CLAVE PRIVADA (la cadena alfanumérica de tu perfil/API — no es tu contraseña) y " +
         "cárgala en el Worker con: wrangler secret put BCENTRAL_API_KEY",
     );
   }

@@ -24,13 +24,17 @@ MCP server para la **Base de Datos Estadísticos (BDE)** del **Banco Central de 
 https://bcentral-mcp.kumocloud.cl/mcp
 ```
 
-Requiere configurar la clave privada gratuita de la API BDE en el Worker:
+Requiere configurar la **clave privada del API BDE** en el Worker:
 
 ```bash
 npx wrangler secret put BCENTRAL_API_KEY
 ```
 
-(La clave se obtiene gratis registrándose en <https://si3.bcentral.cl/Siete/es/Siete/API>.)
+Cómo obtener esa clave (es un proceso de 3 pasos):
+
+1. **Regístrate** con usuario y contraseña en <https://si3.bcentral.cl/Siete/es/Siete/API> (sección *Registrarse*).
+2. **Inicia sesión** — el propio sitio dice: *"Para activar las credenciales debe iniciar sesión"*. Las credenciales del API se activan al entrar.
+3. Dentro del portal, copia tu **clave privada** (la cadena alfanumérica que el sitio te muestra para el Web Service — **no es tu contraseña**). Esa cadena es `BCENTRAL_API_KEY`.
 
 **Local (STDIO):**
 
